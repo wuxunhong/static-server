@@ -36,7 +36,7 @@ var server = http.createServer(function (request, response) {
   response.setHeader('Content-Type', `${fileTPath[suffix] || 'text/html'};charset=utf-8`)
   let content
   try {
-    content = fs.readFileSync(`./public${x}`)
+    content = fs.readFileSync(`./public${filePath}`)
   } catch (error) {
     content = '文件不存在'
     response.statusCode = 404
